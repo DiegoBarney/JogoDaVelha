@@ -143,25 +143,19 @@ bool analisaVencedorOuEmpate(dados_jogador* jogador, char** matriz) {
 
 	for (int i = 0; i < 2; i++)
 	{
-		//DIAGONAIS
-		if (matriz[0][0] == pecasParaAvaliar[i] && matriz[1][1] == pecasParaAvaliar[i] && matriz[2][2] == pecasParaAvaliar[i] ||
-			matriz[0][2] == pecasParaAvaliar[i] && matriz[1][1] == pecasParaAvaliar[i] && matriz[2][0] == pecasParaAvaliar[i])
-		{
-			jogador->vencedor = true;
-		}
+		if (//DIAGONAIS
+			 matriz[0][0] == pecasParaAvaliar[i] && matriz[1][1] == pecasParaAvaliar[i] && matriz[2][2] == pecasParaAvaliar[i] ||
+			 matriz[0][2] == pecasParaAvaliar[i] && matriz[1][1] == pecasParaAvaliar[i] && matriz[2][0] == pecasParaAvaliar[i] ||
 
-		//COLUNAS
-		if (matriz[0][0] == pecasParaAvaliar[i] && matriz[1][0] == pecasParaAvaliar[i] && matriz[2][0] == pecasParaAvaliar[i] ||
-			matriz[0][1] == pecasParaAvaliar[i] && matriz[1][1] == pecasParaAvaliar[i] && matriz[2][1] == pecasParaAvaliar[i] ||
-			matriz[0][2] == pecasParaAvaliar[i] && matriz[1][2] == pecasParaAvaliar[i] && matriz[2][2] == pecasParaAvaliar[i])
-		{
-			jogador->vencedor = true;
-		}
+			 //COLUNAS
+			 matriz[0][0] == pecasParaAvaliar[i] && matriz[1][0] == pecasParaAvaliar[i] && matriz[2][0] == pecasParaAvaliar[i] ||
+			 matriz[0][1] == pecasParaAvaliar[i] && matriz[1][1] == pecasParaAvaliar[i] && matriz[2][1] == pecasParaAvaliar[i] ||
+			 matriz[0][2] == pecasParaAvaliar[i] && matriz[1][2] == pecasParaAvaliar[i] && matriz[2][2] == pecasParaAvaliar[i] ||
 
-		//LINHAS
-		if (matriz[0][0] == pecasParaAvaliar[i] && matriz[0][1] == pecasParaAvaliar[i] && matriz[0][2] == pecasParaAvaliar[i] ||
-			matriz[1][0] == pecasParaAvaliar[i] && matriz[1][1] == pecasParaAvaliar[i] && matriz[1][2] == pecasParaAvaliar[i] ||
-			matriz[2][0] == pecasParaAvaliar[i] && matriz[2][1] == pecasParaAvaliar[i] && matriz[2][2] == pecasParaAvaliar[i])
+			 //LINHAS
+			 matriz[0][0] == pecasParaAvaliar[i] && matriz[0][1] == pecasParaAvaliar[i] && matriz[0][2] == pecasParaAvaliar[i] ||
+			 matriz[1][0] == pecasParaAvaliar[i] && matriz[1][1] == pecasParaAvaliar[i] && matriz[1][2] == pecasParaAvaliar[i] ||
+			 matriz[2][0] == pecasParaAvaliar[i] && matriz[2][1] == pecasParaAvaliar[i] && matriz[2][2] == pecasParaAvaliar[i])
 		{
 			jogador->vencedor = true;
 		}
